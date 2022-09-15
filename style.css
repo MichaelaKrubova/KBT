@@ -1,0 +1,218 @@
+/*|| General styles*/
+.red-border {
+    border: 1px solid red;
+}
+
+
+
+:root {
+    --darkBlue: #002256;
+    --blue: #224694;
+    --lightBlue: #00D4FA;
+    --CTAred: #C73214;
+    --CTAorange: #FA7A3E;
+}
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    
+    box-sizing: inherit;
+    }
+
+
+
+html {
+    font-size: 62.5%;  /*10px*/
+    
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 3rem);
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bg-darkBlue {
+    background-color: var(--darkBlue);
+}
+
+/* || Font ad text */
+
+h1, h2, h3, h4 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    padding: 1rem 0;
+
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.4rem;
+    max-width: 75ch;
+}
+
+li a {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.subheading {
+    font-size: 2.5rem;
+    color: grey;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-darkBlue {
+    color: var(--darkBlue);
+}
+
+
+.nav-link {
+    text-decoration: none;
+}
+
+
+
+
+/*|| Utilities*/
+
+
+
+/*|| Header section*/
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(181.15deg, #224694 0.99%, rgba(0, 212, 250, 0.42) 217.41%);
+    
+}
+
+.brand {
+    margin: 1rem;
+}
+
+.nav-menu {
+
+    padding: 0 2rem;
+    margin: 0;
+    list-style-type: none;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+
+.page-hero {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding: 1rem;
+
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+}
+
+.heading {
+    grid-area: 2 / 1 / 3 / 7;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 37.5em) {
+    .nav-menu {
+        --gap: 5rem;
+
+        position: fixed;
+        inset: 0 0 0 40%;
+        background: linear-gradient(180deg, #224694 1.65%, #00D4FA 124.21%);
+
+        flex-direction: column;
+        padding: min(30vh, 15rem) 4rem;
+        z-index: 1000;
+
+        transform: translate(100%);
+        transition: 400ms ease-out;
+    }
+
+    .nav-menu[data-visible = "true"] {
+        transform: translate(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+
+        border: none;
+        border-radius: 1rem;
+
+        background: 0;
+
+        /* background: url(/media/bars-staggered-solid.svg); */
+
+        width: 3rem;
+        aspect-ratio: 1;
+        z-index: 9999;
+
+    }
+
+    .mobile-nav-toggle i {
+        color: white;
+    }
+
+
+
+
+    @supports (backdrop-filter: blur(3px)) {
+        .nav-menu {
+            background: linear-gradient(180deg, #224694 1.65%, rgba(0, 212, 250, 0.6) 124.21%);
+            backdrop-filter: blur(3px);
+    
+    }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 37.5em) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 48em) {
+    
+}
+
+/* Large devices (laptops/desktops, 1025px and up) */
+@media only screen and (min-width: 64em) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 75em) {}
