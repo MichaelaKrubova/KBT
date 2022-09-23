@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans&display=swap" rel="stylesheet"> 
     
     <!-- icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
     <script src="https://kit.fontawesome.com/9c6b3cf538.js" crossorigin="anonymous"></script>
 
     </head>
@@ -44,29 +44,52 @@
                                 </a>
                         </div>
 
-                        <button class="mobile-nav-toggle" aria-label="navigation menu" aria-controls="nav-menu" aria-expanded="false">
-                            <i class="fa-solid fa-bars-staggered fa-2x"></i>
+                        <button class="mobile-nav-toggle " aria-label="navigation menu" aria-controls="nav-menu" aria-expanded="false">
+                            <i class="fa-solid fa-bars-staggered fa-2x menu-icon"></i>
+                            <i class="fa-solid fa-xmark fa-2x close-icon"></i>
                         </button>
                         
                         <nav>
-                            <ul class="nav-menu flex uppercase" id="nav-menu" data-visible = "false">
-                                <li><a href="#" class="nav-link">Domů</a></li>
-                                <li><a href="#" class="nav-link">Služby</a></li>
-                                <li><a href="#" class="nav-link">O nás</a></li>
-                                <li><a href="#" class="nav-link">Kontakt</a></li>
+                            <ul class="nav-menu flex uppercase nav-style" id="nav-menu" data-visible = "false">
+                                <li><a href="#" class="no-underline">Domů</a></li>
+                                <li><a href="#" class="no-underline">Služby</a>
+                                    <ul class="dropdown nav-style">
+                                        <li><a href="#" class="no-underline">Vodoměry</a></li>
+                                        <li><a href="#" class="no-underline">Průtokoměry</a></li>
+                                        <li><a href="#" class="no-underline">IRTN</a></li>
+                                        <li><a href="#" class="no-underline">Ostatní</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="no-underline">O nás</a></li>
+                                <li><a href="#" class="no-underline">Kontakt</a></li>
                             </ul>
                             
                         </nav>
         </header>
 
-        
-
-        <div class="page-hero">
+        <!-- Page-hero section -->
+        <section class="page-hero flex">
+    
             <div class="heading">
-                <h1 class="uppercase text-darkBlue">Vodoměry | měřiče</h1>
-                <div class="subheading" role="doc-subtitle">Mějte svou spotřebu<br> pod kontrolou</div>
+                <h1 class="uppercase text-darkBlue">Chytré vodoměry a měřiče</h1>
+                    <div class="subheading" role="doc-subtitle">Mějte svou spotřebu pod kontrolou</div>
             </div>
-        </div>
+
+                <a href="#" class="no-underline btn btn-primary flex" role="button">Zjistěte více</a>
+
+            <div class="wave">
+                <svg width="1920" height="305" viewBox="0 0 1920 305" fill="none" preserveAspectRatio="none">
+                    <path d="M0 639.667H1920V104.667C1920 104.667 1755.5 -130.833 960 104.667C164.5 340.167 0 104.667 0 104.667V639.667Z" fill="url(#paint0_linear_68_90)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_68_90" x1="960" y1="639.667" x2="950.543" y2="-772.474" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#224694"/>
+                    <stop offset="1" stop-color="#002256" stop-opacity="1"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                    
+            </div> 
+        </section>
 
         <!-- Services section -->
         <section>
