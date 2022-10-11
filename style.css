@@ -88,7 +88,7 @@ a {
 .subheading {
     padding: 2rem 0;
     font-size: 2rem;
-    color: rgb(36, 36, 36);
+    color: rgb(193, 191, 191);
 }
 
 .uppercase {
@@ -106,6 +106,12 @@ a {
 
 
 /*|| Utilities*/
+.container {
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 1rem;
+}
+
 .btn {
     align-items: center;
     justify-content: center;
@@ -125,11 +131,17 @@ a {
     
 }
 
-/*|| Header section*/
 
-.primary-header {
+
+
+
+/*|| navigation */
+
+
+.topbar {
     padding: 0 4rem;
     position: fixed;
+    height: max-content;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
@@ -138,10 +150,19 @@ a {
     
 }
 
+.topbar.scrolled {
+    background: linear-gradient(180deg, #224694 1.65%, #00D4FA 124.21%);
+    max-width: calc(100vw - 1.5rem);
+}
 
+@supports (backdrop-filter: blur(3px)) {
+    .topbar.scrolled {
+        background: linear-gradient(180deg, #224694 1.65%, rgba(0, 212, 250, 0.4) 124.21%);
+        backdrop-filter: blur(3px);
 
-/* navigation */
+    }
 
+}
 
 ul li {
     padding: 2rem;
@@ -158,7 +179,7 @@ ul li:last-child {
     inset: 0 0 0 40%;
     background: linear-gradient(180deg, #224694 1.65%, #00D4FA 124.21%);
 
-    height: 75vh;
+    height: 100vh;
     flex-direction: column;
     padding: min(30vh, 15rem) 0;
     z-index: 1000;
@@ -187,7 +208,7 @@ ul li:last-child {
     display: block;
     position: absolute;
     top: 1rem;
-    right: 2rem;
+    right: 3rem;
 
     border: none;
     border-radius: 1rem;
@@ -269,7 +290,6 @@ ul li ul {
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    background: linear-gradient(180deg, #224694 1.65%, #00D4FA 124.21%);
     
     margin-top: 2rem;
     
@@ -284,6 +304,7 @@ ul li ul {
 ul li:hover > ul, 
 ul li:focus-within > ul,
 ul li ul:hover {
+    position: inherit;
     visibility: visible;
     opacity: 1;
     pointer-events: all;
@@ -294,6 +315,8 @@ ul li ul li {
     width: 100%;
     border-bottom: 1px solid var(--lightBlue);
   }
+
+
 
 li:focus-within a {
     outline: none;
@@ -323,47 +346,52 @@ section {
     padding: 3rem;
 }
 
+/*|| Header section*/
+
+
 /* || Page hero */
 .page-hero {
     width: 100vw;
     height: 100vh;
     text-align: center;
-    padding: 4rem;
+    padding: 4rem 4rem 4rem 0;
 
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     text-align: left;
 
-    background: linear-gradient(180deg, rgba(34, 70, 148, 0.8) -9.94%, rgba(0, 212, 250, 0.6) 79%), 
-                url(/media/pictures/meraky.png) right no-repeat;
+    background: linear-gradient(180deg, #224694 0%, rgba(0, 212, 250, 0.29) 36.16%, rgba(255, 255, 255, 0.79) 79.06%), 
+                url(/media/pictures/meraky.png) 70% no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
 .heading {
     
-    padding: 2rem;
-    background: linear-gradient(180deg, #224694 1%, rgba(0, 212, 250, 0.3) 100%);
+    position: relative;
+    left: 0;
+    padding: 3rem;
+    background: rgba(0, 34, 86, 0.86);
     box-shadow: inset 36.3333px -36.3333px 36.3333px rgba(165, 165, 165, 0.056), inset -36.3333px 36.3333px 36.3333px rgba(255, 255, 255, 0.056);
     
 
-    border-radius: 1.5rem;
+    border-radius: 0 1rem 1rem 0;
 }
 
 @supports (backdrop-filter: blur(.5rem)) {
     .heading {
-        background: rgba(217, 217, 217, 0.056);
+        
         box-shadow: inset 36.3333px -36.3333px 36.3333px rgba(165, 165, 165, 0.056), inset -36.3333px 36.3333px 36.3333px rgba(255, 255, 255, 0.056);
         backdrop-filter: blur(3px);
 
     }
 
-}
+} 
 
 .btn-primary {
     position: relative;
-    margin: 3rem 2rem;
+    margin: 3rem 0;
     background: linear-gradient(90deg, #224694 0%, #C73214 138.69%);
     padding: 1rem 4rem;
     z-index: 2;
@@ -384,9 +412,6 @@ section {
     opacity: 1;
 }
 
-.btn-icon{
-    padding: 0;
-}
 
 .wave {
     position: absolute;
@@ -410,7 +435,35 @@ section {
 
 /*|| Services section */
 
+.card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 
+    padding: 3rem 0;
+    width: 50%;
+
+
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.circle {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 15rem;
+
+    background: rgba(0, 212, 250, 0.15);
+    border: 5px solid white;
+    box-shadow: 0 0 0 2px rgba(0, 212, 250, 0.3);
+}
+
+
+.secondary-btn {
+    background: #FA7A3E;
+}
 
 
 
@@ -418,75 +471,6 @@ section {
 /* Extra small devices (phones, 576px and down) */
 @media only screen and (max-width: 36em) {
     
-    /* ul li {
-        padding: 2rem;
-        border-bottom: 1px solid var(--lightBlue);
-    }
-
-    ul li:last-child {
-        border-bottom: none;
-    }
-
-    .nav-menu {
-        position: fixed;
-        inset: 0 0 0 40%;
-        background: linear-gradient(180deg, #224694 1.65%, #00D4FA 124.21%);
-
-        height: 75vh;
-        flex-direction: column;
-        padding: min(30vh, 15rem) 0;
-        z-index: 1000;
-
-        transform: translateX(100%);
-        transition: transform 500ms ease-out;
-    }
-
-    .nav-menu[data-visible = "true"] {
-        transform: translateX(0%);
-    }
-
-
-    .mobile-nav-toggle {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 2rem;
-
-        border: none;
-        border-radius: 1rem;
-
-        background: transparent;
-        width: 3rem;
-        aspect-ratio: 1;
-        z-index: 9999;
-
-        cursor: pointer;
-
-    }
-
-    .mobile-nav-toggle i {
-        color: white;
-        
-    }
-
-    .mobile-nav-toggle[aria-expanded = "true"] .menu-icon{
-        display: none;
-    }
-
-    .mobile-nav-toggle[aria-expanded = "false"] .close-icon{
-        display: none;
-    }
-
-
-
-    @supports (backdrop-filter: blur(3px)) {
-        .nav-menu {
-            background: linear-gradient(180deg, #224694 1.65%, rgba(0, 212, 250, 0.6) 124.21%);
-            backdrop-filter: blur(3px);
-    
-        }
-
-    } */
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -516,12 +500,27 @@ section {
         transform: translateX(0%);
         backdrop-filter: none;
 
-        gap: var(--gap, 3rem);
+        /* gap: var(--gap, 3rem); */
     }
 
     ul li {
         border-bottom: none;
+        
+        border-radius: 0 0 1rem 1rem;
     }
+
+    ul li:hover > ul, 
+    ul li:focus-within > ul,
+    ul li ul:hover {
+    position: absolute;
+    background: linear-gradient(180deg, #224694 1.65%, #00D4FA 124.21%);
+}
+
+    ul li ul {
+        border-radius: 0 0 1rem 1rem;
+
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
