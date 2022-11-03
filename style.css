@@ -35,10 +35,6 @@ body {
 }
 
 
-.flex {
-    display: flex;
-    /* gap: var(--gap, 4rem); */
-}
 
 .bg-blue {
     background-color: var(--blue);
@@ -96,6 +92,9 @@ a {
     text-transform: uppercase;
 }
 
+.white-text {
+    color: white;
+}
 
 
 
@@ -103,6 +102,15 @@ a {
 
 
 /*|| Utilities*/
+
+/* || layout */
+
+
+.flex {
+    display: flex;
+    /* gap: var(--gap, 4rem); */
+}
+
 .center {
     justify-content: center;
     align-items: center;
@@ -110,12 +118,12 @@ a {
 }
 
 .row-container {
-    flex-flow: row nowrap;
-    margin: 4rem 1rem;
+    flex-flow: row wrap;
+    margin: 2rem 1rem;
 }
 
 .col-container {
-    flex-flow: column wrap;
+    flex-flow: column;
 
 }
 
@@ -127,6 +135,8 @@ a {
     height: 100vh;
 }
 
+/* || buttons */
+
 .btn {
     align-items: center;
     justify-content: center;
@@ -135,16 +145,98 @@ a {
     
     width: fit-content;
     height: fit-content;
-
-    
     
 }
+
+
+.btn-style {
+    background: linear-gradient(90deg, #224694 0%, #C73214 138.69%);
+}
+
+.btn-style::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(90deg, #224694 -52.76%, #00D4FA 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.btn-style:hover::before {
+    opacity: 1;
+}
+
+
+.btn-primary {
+    position: relative;
+    margin: 3rem 0;
+    padding: 1rem 4rem;
+    z-index: 2;
+}
+
+
+.btn-secondary {
+    position: relative;
+    margin: 3rem 1rem;
+    padding: .8rem 2.5rem;
+    z-index: 2;
+}
+
+/* || components */
+
+.container {
+    height: 60vh;
+}
+
 
 .no-underline{
     text-decoration: none;
     
 }
 
+.bg-skew {
+    transform: skewY(4deg);
+}
+
+.no-skew {
+    transform: skewY(-4deg);
+}
+
+.divider-bottom-light {
+    grid-area: 6 / 3 / 7 / 7;
+    width: 75vw;
+    height: 25vh;
+    background: linear-gradient(to right bottom, transparent 49%, transparent 40%, rgba(0, 212, 250, 0.75) 50%, rgba(0, 212, 250, 0.75)  50%);
+}
+
+.divider-bottom-dark {
+    grid-area: 6 / 1 / 7 / 7;
+    width: 75vw;
+    height: 25vh;
+    background: linear-gradient(to left bottom, transparent 49%, transparent 40%, rgba(34, 70, 148, 0.8) 50%, rgba(34, 70, 148, 0.8) 50%);
+}
+
+.right-top-divider {
+    position: relative;
+    padding: 5rem;
+    background: linear-gradient(to right bottom, transparent 49%, transparent 40%, var(--darkBlue) 50%, var(--darkBlue)  50%);
+    transform: skewY(4deg);
+    width: 75vw;
+    margin-left: 25vw;
+    margin-bottom: -2%;
+    
+}
+
+.left-bottom-divider {
+    position: relative;
+    padding: 5rem;
+    background: linear-gradient(to left top, transparent 49%, transparent 40%, var(--darkBlue) 50%, var(--darkBlue)  50%);
+    transform: skewY(4deg);
+    width: 75vw;
+    margin-top: -1%;
+    
+}
 
 
 
@@ -153,17 +245,17 @@ a {
 
 
 .topbar {
-    padding: 0 5rem;
+    padding: 1rem 5rem;
     position: fixed;
     height: max-content;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.85);
     z-index: 9999;
     
 }
-
+/* 
 .topbar.scrolled {
     background: linear-gradient(180deg, #224694 1.65%, #00D4FA 124.21%);
     max-width: calc(100vw - 1.5rem);
@@ -171,24 +263,29 @@ a {
 
 .topbar.scrolled a {
     color: white;
-}
+} */
 
 
 #toggleBtn { 
     color: #002256;
     
 }
-
+/* 
 .topbar.scrolled #toggleBtn { 
     color: white;
     
-}
+} */
 
 @supports (backdrop-filter: blur(3px)) {
-    .topbar.scrolled {
+    /* .topbar.scrolled {
         background: linear-gradient(180deg, #224694 1.65%, rgba(0, 212, 250, 0.4) 124.21%);
         backdrop-filter: blur(3px);
 
+    } */
+
+    .topbar {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(3px);
     }
 
 }
@@ -372,6 +469,11 @@ li a:active {
 /* || Sections */
 
 section {
+    width: 100vw;
+    height: 100%;
+   min-height: 100vh;
+
+    position: relative;
     padding: 3rem;
 }
 
@@ -392,7 +494,7 @@ section {
     text-align: left;
 
 
-    background: url(/KBT/media/pictures/woman.png) center no-repeat;
+    background: url(/media/pictures/woman.png) center no-repeat;
     background-size: cover;
     background-attachment: fixed; 
 }
@@ -426,39 +528,12 @@ section {
 .btn-primary {
     position: relative;
     margin: 3rem 0;
-    background: linear-gradient(90deg, #224694 0%, #C73214 138.69%);
     padding: 1rem 4rem;
     z-index: 2;
 }
 
-.btn-primary::before {
-    content: "";
-    inset: 0;
-    position: absolute;
-    background: linear-gradient(90deg, #224694 -52.76%, #00D4FA 100%);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity .5s ease-in-out;
-}
-
-.btn-primary:hover::before {
-    opacity: 1;
-}
 
 
-.divider1 {
-    grid-area: 6 / 3 / 7 / 7;
-    width: 75vw;
-    height: 25vh;
-    background: linear-gradient(to right bottom, transparent 49%, transparent 40%, rgba(0, 212, 250, 0.75) 50%, rgba(0, 212, 250, 0.75)  50%);
-}
-
-.divider2 {
-    grid-area: 6 / 1 / 7 / 7;
-    width: 75vw;
-    height: 25vh;
-    background: linear-gradient(to left bottom, transparent 49%, transparent 40%, rgba(34, 70, 148, 0.8) 50%, rgba(34, 70, 148, 0.8) 50%);
-}
 
 
 
@@ -468,6 +543,7 @@ section {
 /*|| Services section */
 
 .card {
+    width: 20rem;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
@@ -509,7 +585,7 @@ h3 .card {
     box-shadow: 0 0 0 2px var(--lightBlue);
 }
 
-.triangle {
+.card-btn {
     position: relative;
     bottom: 0;
     justify-content: flex-end;
@@ -519,13 +595,13 @@ h3 .card {
     transition: all 1s ease;
 }
 
-.card:hover .triangle {
+.card:hover .card-btn {
     background: linear-gradient(to right bottom, #fff 35%, var(--lightBlue) 49%, var(--darkBlue) 50%, var(--darkBlue) 50%);
     opacity: 1;
 }
 
 
-.triangle p {
+.card-btn p {
     position: relative;
     padding: 1rem;
     margin-top: 1rem;
@@ -534,17 +610,28 @@ h3 .card {
 }
 
 /* || about section */
+
+
 .text-wrapper {
-    margin-top: 8rem;
-
+    width: 75vw;
+    height: 40%;
     background: white;
-    padding: 4rem;
+    z-index: 2;
 
+}
+
+.text-wrapper p {
+    margin: 2rem;
 }
 
 .container-img {
-    width: 90%;
+    width: 75vw;
+    height: 60%;
+    background: url(/media/pictures/meter-solutions.png) center no-repeat;
+    background-size: cover;
+    padding: 5rem;
 }
+
 
 
 
@@ -622,9 +709,6 @@ li:hover {
     background: var(--darkBlue);
 }
 
-.container-img {
-    width: 50%;
-}
 
 
  }
