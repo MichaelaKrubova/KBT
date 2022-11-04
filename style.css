@@ -59,16 +59,19 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 h2 {
     font-size: 2.5rem;
+    
+    text-align: center;
 }
 
 
 h3 {
     font-size: 2rem;
+    margin: 1rem 0;
 }
 
 p {
@@ -135,9 +138,27 @@ a {
     height: 100vh;
 }
 
+
+
+.no-underline{
+    text-decoration: none;
+    
+}
+
+.bg-skew {
+    transform: skewY(4deg);
+}
+
+.bg-no-skew {
+
+    transform: skewY(-4deg);
+}
+
 /* || buttons */
 
 .btn {
+    position: relative;
+
     align-items: center;
     justify-content: center;
     color: white;
@@ -151,6 +172,7 @@ a {
 
 .btn-style {
     background: linear-gradient(90deg, #224694 0%, #C73214 138.69%);
+    z-index: 2;
 }
 
 .btn-style::before {
@@ -169,18 +191,30 @@ a {
 
 
 .btn-primary {
-    position: relative;
     margin: 3rem 0;
     padding: 1rem 4rem;
-    z-index: 2;
 }
 
 
 .btn-secondary {
-    position: relative;
-    margin: 3rem 1rem;
+    margin:  3rem 0;
     padding: .8rem 2.5rem;
-    z-index: 2;
+}
+
+.card-btn {
+    bottom: 0;
+    justify-content: flex-end;
+    width: 100%;
+    background: linear-gradient(to right bottom, #fff 35%, var(--lightBlue) 49%, var(--darkBlue) 50%, var(--darkBlue) 50%);
+    opacity: 1;
+}
+
+
+.card-btn p {
+    padding: 1rem;
+    margin-top: 1rem;
+    color: #fff;
+
 }
 
 /* || components */
@@ -190,18 +224,6 @@ a {
 }
 
 
-.no-underline{
-    text-decoration: none;
-    
-}
-
-.bg-skew {
-    transform: skewY(4deg);
-}
-
-.no-skew {
-    transform: skewY(-4deg);
-}
 
 .divider-bottom-light {
     grid-area: 6 / 3 / 7 / 7;
@@ -471,10 +493,12 @@ li a:active {
 section {
     width: 100vw;
     height: 100%;
-   min-height: 100vh;
+    min-height: 100vh;
 
     position: relative;
     padding: 3rem;
+
+    
 }
 
 /*|| Header section*/
@@ -501,11 +525,10 @@ section {
 
 
 .heading {
-    grid-area: 3 / 1 / 5 / 6;
+    grid-area: 2 / 1 / 6 / 6;
     position: relative;
     left: 0;
     padding: 3rem;
-    /* background: rgba(0, 34, 86, 0.86); */
     box-shadow: inset 36.3333px -36.3333px 36.3333px rgba(165, 165, 165, 0.056), inset -36.3333px 36.3333px 36.3333px rgba(255, 255, 255, 0.056);
     
 
@@ -513,24 +536,7 @@ section {
 }
 
 
-@supports (backdrop-filter: blur(.5rem)) {
-    .heading {
-        
-        box-shadow: inset 36.3333px -36.3333px 36.3333px rgba(165, 165, 165, 0.056), inset -36.3333px 36.3333px 36.3333px rgba(255, 255, 255, 0.056);
-        backdrop-filter: blur(3px);
 
-    }
-
-} 
-
-
-
-.btn-primary {
-    position: relative;
-    margin: 3rem 0;
-    padding: 1rem 4rem;
-    z-index: 2;
-}
 
 
 
@@ -585,44 +591,19 @@ h3 .card {
     box-shadow: 0 0 0 2px var(--lightBlue);
 }
 
-.card-btn {
-    position: relative;
-    bottom: 0;
-    justify-content: flex-end;
-    width: 100%;
-    background: linear-gradient(to right bottom, #fff 49%, #fff 40%, var(--darkBlue) 50%, var(--darkBlue) 50%);
-    opacity: 0;
-    transition: all 1s ease;
-}
 
-.card:hover .card-btn {
-    background: linear-gradient(to right bottom, #fff 35%, var(--lightBlue) 49%, var(--darkBlue) 50%, var(--darkBlue) 50%);
-    opacity: 1;
-}
-
-
-.card-btn p {
-    position: relative;
-    padding: 1rem;
-    margin-top: 1rem;
-    color: #fff;
-
-}
 
 /* || about section */
 
 
 .text-wrapper {
     width: 75vw;
-    height: 40%;
+    max-height: 80%;
     background: white;
-    z-index: 2;
+    padding: 1rem 3rem;
 
 }
 
-.text-wrapper p {
-    margin: 2rem;
-}
 
 .container-img {
     width: 75vw;
@@ -642,7 +623,7 @@ h3 .card {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media only screen and (max-width: 36em) {
+@media only screen and (min-width: 36em) {
     
     
 }
@@ -655,6 +636,8 @@ h3 .card {
         grid-area: 3 / 1 / 5 / 4;
 
 }
+
+/* TopNav */
 
     .mobile-nav-toggle {
         display: none;
@@ -709,12 +692,48 @@ li:hover {
     background: var(--darkBlue);
 }
 
+/* Sections */
+.bg-no-skew {
+    margin-top: 3rem;
+}
+
+
+.text-wrapper {
+    justify-content: space-between;
+    width: 50%;
+    height: 60%;
+    background: white;
+    padding: 1rem 3rem;
+
+}
+
+
+.container-img {
+    width: 50%;
+    height: 60%;
+    background-size: cover;
+    padding: 5rem;
+}
+
 
 
  }
 
 /* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (max-width: 62em) {} */
+ @media only screen and (min-width: 62em) {
+    .card-btn {
+        
+        background: linear-gradient(to right bottom, #fff 49%, #fff 40%, var(--darkBlue) 50%, var(--darkBlue) 50%);
+        opacity: 0;
+        transition: all 1s ease;
+    }
+    
+    .card:hover .card-btn {
+        background: linear-gradient(to right bottom, #fff 35%, var(--lightBlue) 49%, var(--darkBlue) 50%, var(--darkBlue) 50%);
+        opacity: 1;
+    }
+    
+ } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* @media only screen and (min-width: 75em) {}; */
