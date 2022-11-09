@@ -59,7 +59,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
 }
 
 h2 {
@@ -122,7 +122,6 @@ a {
 
 .row-container {
     flex-flow: row wrap;
-    margin: 2rem 1rem;
 }
 
 .col-container {
@@ -219,9 +218,6 @@ a {
 
 /* || components */
 
-.container {
-    height: 60vh;
-}
 
 
 
@@ -596,18 +592,23 @@ h3 .card {
 /* || about section */
 
 
+.container {
+    padding: 3rem;
+}
+
+
+
 .text-wrapper {
     width: 75vw;
-    max-height: 80%;
     background: white;
-    padding: 1rem 3rem;
+    padding: 2rem 4rem;
 
 }
 
 
 .container-img {
+    height: 25vh;
     width: 75vw;
-    height: 60%;
     background: url(/media/pictures/meter-solutions.png) center no-repeat;
     background-size: cover;
     padding: 5rem;
@@ -698,22 +699,13 @@ li:hover {
 }
 
 
-.text-wrapper {
-    justify-content: space-between;
-    width: 50%;
-    height: 60%;
-    background: white;
-    padding: 1rem 3rem;
-
-}
 
 
 .container-img {
-    width: 50%;
-    height: 60%;
-    background-size: cover;
-    padding: 5rem;
-}
+    min-height: 30vh;
+
+
+
 
 
 
@@ -721,6 +713,11 @@ li:hover {
 
 /* Large devices (laptops/desktops, 992px and up) */
  @media only screen and (min-width: 62em) {
+    
+    html {
+        font-size: 70%;
+    }
+
     .card-btn {
         
         background: linear-gradient(to right bottom, #fff 49%, #fff 40%, var(--darkBlue) 50%, var(--darkBlue) 50%);
@@ -732,8 +729,69 @@ li:hover {
         background: linear-gradient(to right bottom, #fff 35%, var(--lightBlue) 49%, var(--darkBlue) 50%, var(--darkBlue) 50%);
         opacity: 1;
     }
+
+    
+    .card-btn {
+        
+        background: linear-gradient(to right bottom, #fff 49%, #fff 40%, var(--darkBlue) 50%, var(--darkBlue) 50%);
+        opacity: 0;
+        transition: all 1s ease;
+    }
+    
+    .card:hover .card-btn {
+        background: linear-gradient(to right bottom, #fff 35%, var(--lightBlue) 49%, var(--darkBlue) 50%, var(--darkBlue) 50%);
+        opacity: 1;
+    }
+
+    
+.container {
+    text-align: center;
+    flex-wrap: nowrap;
+    width: 75vw;
+    max-width: 1180px;
+    position: relative;
+}
+
+
+.text-wrapper {
+    width: calc(35.5% + 10rem);
+    min-height: 35rem;
+    z-index: 2;
+
+}
+
+
+.container-img {
+    width: calc(35.5% + 10rem);
+    min-height: 35rem;
+    background-position: 60%;
+}
+
+    
     
  } 
 
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 75em) {}; */
+@media only screen and (min-width: 75em) {
+
+    html {
+        font-size: 75%;
+    }
+
+
+
+.text-wrapper {
+    position: absolute;
+    top: 3rem;
+    left: 5rem;
+
+}
+
+
+.container-img {
+    position: relative;
+    margin: 5rem 0 0 35rem;
+}
+
+};
