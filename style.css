@@ -32,21 +32,9 @@ html {
 body {
     font-family: 'Work Sans', sans-serif;
     overflow-x: hidden;
+    background-color: #F6F7FB;
 }
 
-
-
-.bg-blue {
-    background-color: var(--blue);
-}
-
-.bg-darkBlue {
-    background-color: var(--darkBlue);
-}
-
-.bg-gradient {
-    background: linear-gradient(181.04deg, #224694 -39.03%, rgba(0, 212, 250, 1) 142.12%);
-}
 
 /* || Font ad text */
 
@@ -74,13 +62,9 @@ h3 {
     margin: 1rem 0;
 }
 
-p {
+p, a, li {
     font-size: 1.4rem;
     max-width: 75ch;
-}
-
-a {
-    font-size: 1.4rem;
 }
 
 
@@ -152,6 +136,21 @@ a {
 
     transform: skewY(-4deg);
 }
+
+
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bg-darkBlue {
+    background-color: var(--darkBlue);
+}
+
+.bg-gradient {
+    background: linear-gradient(181.04deg, #224694 -39.03%, rgba(0, 212, 250, 1) 142.12%);
+}
+
 
 /* || buttons */
 
@@ -259,6 +258,8 @@ a {
 
 
 
+
+
 /*|| navigation */
 
 
@@ -308,13 +309,10 @@ a {
 
 }
 
-ul li {
-    padding: 2rem;
-    border-bottom: 1px solid var(--neonBlue);
-}
 
 
-ul li:last-child {
+
+.nav-menu li:last-child {
     border-bottom: none;
 }
 
@@ -392,28 +390,30 @@ ul li:last-child {
 }
 
 
+.nav-menu li {
+    border-bottom: 1px solid var(--neonBlue);
+}
 
-
-li {
+.nav-menu li {
     display: block;
     float: left;
     cursor: pointer;
     position: relative;
     padding: 2rem 2rem;
-
-
+    
+    border-bottom: 1px solid var(--neonBlue);
     
     transition: all 0.5s ease-in;
 }
 
-li:focus-within, 
-li:hover {
+.nav-menu li:focus-within, 
+.nav-menu li:hover {
     background-color: #002256;
 }
 
 
-li a:focus-within, 
-li:hover > a {
+.nav-menu li a:focus-within, 
+.nav-menu li:hover > a {
     color: var(--neonBlue);
 }
 
@@ -422,7 +422,7 @@ li:hover > a {
 }
 
 
-li:hover .triangle-icon {
+.nav-menu li:hover .triangle-icon {
     transform: rotate(90deg);
     transition: .5s;
 }
@@ -430,7 +430,7 @@ li:hover .triangle-icon {
 /* dropmenu nav */
 
 
-ul li ul {
+.nav-menu li ul {
     position: absolute;
     visibility: hidden;
     opacity: 0;
@@ -445,16 +445,16 @@ ul li ul {
 
 }
 
-ul li:hover > ul, 
-ul li:focus-within > ul,
-ul li ul:hover {
+.nav-menu li:hover > ul, 
+.nav-menu li:focus-within > ul,
+.nav-menu li ul:hover {
     position: inherit;
     visibility: visible;
     opacity: 1;
     pointer-events: all;
 }
 
-ul li ul li {
+.dropdown li {
     clear: both;
     width: 100%;
     border-bottom: 1px solid var(--neonBlue);
@@ -462,27 +462,48 @@ ul li ul li {
 
 
 
-li:focus-within a {
+  .nav-menu  li:focus-within a {
     outline: none;
   }
 
 
 
-li a {
+.nav-menu  li a {
     color: white;
     transition: color .2s ease-in;
 }
 
-li a:focus, li a:hover {
+.nav-menu li a:focus, 
+.nav-menu li a:hover {
     color: var(--neonBlue);
 }
 
-li a:active {
+.nav-menu li a:active {
     color: #78ccdb;
 }
 
 
+.footer-menu {
+    list-style-type: none;
+    width: 100vw;
+    background-color: var(--darkBlue);
 
+}
+
+.footer-menu ul {
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.footer-menu li {
+    list-style-type: none;
+
+}
+
+
+.footer-menu li a:hover {
+    font-style: italic;
+}
 
 /* || Sections */
 
@@ -545,16 +566,11 @@ section {
 /*|| Services section */
 
 .card {
-    width: 20rem;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
+    width: 17rem;
     margin: 3rem;
     background: white;
 
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 0 6px rgba(0, 0, 0, 0.15);
 }
 
 h3 .card {
@@ -570,13 +586,17 @@ h3 .card {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
+.card-link {
+    width: inherit;
+}
+
 
 .circle {
     position: relative;
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 15rem;
-    margin: 4rem 5rem;
+    margin: 3.5rem;
 
     background: white;
     border: 5px solid var(--lightBlue);
@@ -609,10 +629,74 @@ h3 .card {
 .container-img {
     height: 25vh;
     width: 75vw;
-    background: url(/media/pictures/meter-solutions.png) center no-repeat;
-    background-size: cover;
     padding: 5rem;
 }
+
+.container-img-about {
+    background: url(/media/pictures/meter-solutions.png) center no-repeat;
+    background-size: cover;
+}
+
+/* || reasons section */
+
+.container-img-reason {
+    background: url(/media/pictures/meraky.png) no-repeat;
+    background-position: 25%;
+    background-size: cover;
+}
+
+.item-list li {
+    padding: 1rem;
+    list-style-type: none;
+    position: relative;
+    text-align: left;
+}
+
+.item-list li::before {
+    content: "\2022";
+    display: inline-block;
+    font-weight: bold;
+    width: 2rem;
+    margin-left: -2rem;
+    color: var(--CTAred);
+
+}
+
+
+/* || Footer */
+
+footer {
+    
+    width: 100vw;
+    height: 100%;
+
+    position: relative;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-content {
+    padding: 3rem;
+    justify-content: space-around;
+}
+
+
+footer .circle {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 15rem;
+    margin: 1.5rem;
+    background: white;
+    border: 5px solid var(--lightBlue);
+    box-shadow: 0 0 0 2px rgba(0, 212, 250, 0.3);
+}
+
+footer .circle:hover {
+    box-shadow: 0 0 0 2px var(--lightBlue);
+}
+
 
 
 
@@ -632,6 +716,10 @@ h3 .card {
 
 /*Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 48em) { 
+
+    html {
+        font-size: 67%;
+    }
     
     .heading {
         grid-area: 3 / 1 / 5 / 4;
@@ -660,19 +748,19 @@ h3 .card {
         /* gap: var(--gap, 3rem); */
     }
 
-    ul li {
+    .nav-menu li {
         border-bottom: none;
         
     }
 
-    ul li:hover > ul, 
-    ul li:focus-within > ul,
-    ul li ul:hover {
+    .nav-menu li:hover > ul, 
+    .nav-menu li:focus-within > ul,
+    .nav-menu li ul:hover {
     position: absolute;
     background: linear-gradient(180deg, #224694 1.65%, #00D4FA 124.21%);
 }
 
-li a {
+.nav-menu li a {
     color: var(--darkBlue);
     transition: color .2s ease-in;
 }
@@ -680,8 +768,8 @@ li a {
 
 
 
-li:focus-within, 
-li:hover {
+.nav-menu li:focus-within, 
+.nav-menu li:hover {
     background: transparent;
 }
 
@@ -703,10 +791,6 @@ li:hover {
 
 .container-img {
     min-height: 30vh;
-
-
-
-
 
 
  }
@@ -795,3 +879,4 @@ li:hover {
 }
 
 };
+ }
