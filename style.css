@@ -270,7 +270,7 @@ p, a, li {
     width: 100vw;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     z-index: 9999;
     
 }
@@ -397,13 +397,17 @@ p, a, li {
 .nav-menu li {
     display: block;
     float: left;
-    cursor: pointer;
     position: relative;
-    padding: 2rem 2rem;
     
     border-bottom: 1px solid var(--neonBlue);
     
     transition: all 0.5s ease-in;
+}
+
+.nav-menu li a {
+    
+    display: block;
+    padding: 2rem 2rem;
 }
 
 .nav-menu li:focus-within, 
@@ -435,7 +439,6 @@ p, a, li {
     visibility: hidden;
     opacity: 0;
     
-    margin-top: 2rem;
     
     pointer-events: none;
     z-index: 2;
@@ -501,6 +504,11 @@ p, a, li {
 }
 
 
+.footer-menu li a {
+    transition: all 1s ease;
+
+}
+
 .footer-menu li a:hover {
     font-style: italic;
 }
@@ -518,7 +526,9 @@ section {
     
 }
 
-/*|| Header section*/
+section h2 {
+    padding: 3rem;
+}
 
 
 /* || Page hero */
@@ -535,7 +545,7 @@ section {
     text-align: left;
 
 
-    background: url(/media/pictures/woman.png) center no-repeat;
+    background: url(/KBT/media/pictures/woman.png) center no-repeat;
     background-size: cover;
     background-attachment: fixed; 
 }
@@ -633,14 +643,14 @@ h3 .card {
 }
 
 .container-img-about {
-    background: url(/media/pictures/meter-solutions.png) center no-repeat;
+    background: url(/KBT/media/pictures/meter-solutions.png) center no-repeat;
     background-size: cover;
 }
 
 /* || reasons section */
 
 .container-img-reason {
-    background: url(/media/pictures/meraky.png) no-repeat;
+    background: url(/KBT/media/pictures/meraky.png) no-repeat;
     background-position: 25%;
     background-size: cover;
 }
@@ -704,6 +714,13 @@ footer .circle:hover {
 
 /* Extra small devices (phones, 576px and down) */
 @media only screen and (max-width: 36em) {
+
+
+
+    .footer-menu > ul {
+        opacity: 0;
+        visibility: hidden;
+    }
     
 }
 
@@ -782,9 +799,6 @@ footer .circle:hover {
 }
 
 /* Sections */
-.bg-no-skew {
-    margin-top: 3rem;
-}
 
 
 
