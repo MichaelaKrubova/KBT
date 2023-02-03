@@ -2,7 +2,7 @@
         <nav class="topbar flex">
 
                 <div class="brand">
-                    <a href="#" class="logo-link" aria-label="Zpět na úvodní stranu">
+                    <a href="<?php echo $ROOT; ?>index.php" class="logo-link" aria-label="Zpět na úvodní stranu">
                         <svg width="29" height="44" viewBox="0 0 29 44" fill="none">
                             <g clip-path="url(#clip0_5_609)">
                             <path d="M15.3458 1.31467L14.5 0L13.6542 1.31467C12.7467 2.726 4.78258 15.2407 4.78258 19.8819C4.78258 24.9098 9.14104 29 14.5 29C19.859 29 24.2174 24.9098 24.2174 19.8819C24.2174 15.2419 16.2533 2.72721 15.3458 1.31467ZM14.5 26.9881C10.2515 26.9881 6.79445 23.8005 6.79445 19.8819C6.79445 16.8055 11.7595 8.1635 14.5 3.74583C17.2405 8.1635 22.2055 16.8067 22.2055 19.8831C22.2055 23.8005 18.7485 26.9881 14.5 26.9881ZM20.4897 19.7176C20.4897 22.7964 17.8072 25.294 14.5 25.294C11.1928 25.294 8.51029 22.7964 8.51029 19.7176C8.51029 19.5206 8.53566 19.2983 8.58037 19.0542C8.58037 19.0542 10.1585 15.8932 14.4372 19.0542C18.061 21.7307 20.4184 19.0542 20.4184 19.0542C20.4643 19.2983 20.4897 19.5206 20.4897 19.7176Z" fill="#002256"/>
@@ -25,7 +25,7 @@
             
 
             <ul class="nav-menu flex uppercase" id="nav-menu" role="menu" data-visible = "false">
-                <li role="none"><a href="../index.php" class="no-underline" role="položka menu">Domů</a></li>
+                <li role="none"><a href="<?php echo $ROOT; ?>index.php" class="no-underline" role="položka menu">Domů</a></li>
                 <li role="none"  id="dropdown" ></lirole><a href="#" class="no-underline" id="dropdown-link" role="položka menu">Služby <iconify-icon icon="codicon:triangle-right" class="triangle-icon"></iconify-icon>
                 </a>
                     <ul class="dropdown" >
@@ -36,7 +36,7 @@
                     </ul>
                 </li>
                 <li role="none"><a href="<?php echo $ROOT; ?>pages/about.php" class="no-underline" role="položka menu">O nás</a></li>
-                <li role="none"><a href="/" class="no-underline" role="položka menu">Kontakt</a></li>
+                <li role="none"><a href="<?php echo $ROOT; ?>pages/contact.php" class="no-underline" role="položka menu">Kontakt</a></li>
             </ul>
                 
         </nav>

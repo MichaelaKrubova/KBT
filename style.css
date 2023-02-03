@@ -32,7 +32,7 @@ html {
 body {
     font-family: 'Work Sans', sans-serif;
     overflow-x: hidden;
-    background-color: #F6F7FB;
+    background-color: #f9f9fd;
 }
 
 
@@ -47,7 +47,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 3.2rem;
+    font-size: 4rem;
 }
 
 h2 {
@@ -203,7 +203,7 @@ p, a, li {
     bottom: 0;
     justify-content: flex-end;
     width: 100%;
-    background: linear-gradient(to right bottom, #fff 35%, var(--lightBlue) 49%, var(--darkBlue) 50%, var(--darkBlue) 50%);
+    background: linear-gradient(to right bottom, #fff 45%, var(--lightBlue) 49%, var(--darkBlue) 50%, var(--darkBlue) 50%);
     opacity: 1;
 }
 
@@ -218,6 +218,33 @@ p, a, li {
 /* || components */
 
 
+
+.container {
+    padding: 3rem;
+}
+
+
+
+.text-wrapper {
+    width: 75vw;
+    background: white;
+    padding: 2rem 4rem;
+
+}
+
+.long-text-wrapper {
+    width: 75vw;
+    background: white;
+    padding: 2rem 4rem;
+
+}
+
+
+.container-img {
+    height: 25vh;
+    width: 75vw;
+    padding: 5rem;
+}
 
 
 .divider-bottom-light {
@@ -256,8 +283,15 @@ p, a, li {
 }
 
 
+.scrollDown {
+    margin-top: 0;
+    transition: margin-top .8s ease;
+    cursor: pointer;
+}
 
-
+.scrollDown:hover {
+    margin-top: .8rem;
+}
 
 
 /*|| navigation */
@@ -270,7 +304,7 @@ p, a, li {
     width: 100vw;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.85);
     z-index: 9999;
     
 }
@@ -296,15 +330,13 @@ p, a, li {
 } */
 
 @supports (backdrop-filter: blur(3px)) {
-    /* .topbar.scrolled {
-        background: linear-gradient(180deg, #224694 1.65%, rgba(0, 212, 250, 0.4) 124.21%);
+     .topbar {
         backdrop-filter: blur(3px);
 
-    } */
+    } 
 
     .topbar {
-        background: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(3px);
+        background: rgba(255, 255, 255, 0.85);
     }
 
 }
@@ -382,7 +414,7 @@ p, a, li {
 
 @supports (backdrop-filter: blur(3px)) {
     .nav-menu {
-        background: linear-gradient(180deg, #224694 1.65%, rgba(0, 212, 250, 0.6) 124.21%);
+       
         backdrop-filter: blur(3px);
 
     }
@@ -522,6 +554,7 @@ section {
 
     position: relative;
     padding: 3rem;
+    overflow: auto;
 
     
 }
@@ -530,8 +563,23 @@ section h2 {
     padding: 3rem;
 }
 
+article {
+    padding: 5rem;
+    overflow: auto;
+    
+}
+
+article a {
+    color: black;
+}
+
+
+
+
 
 /* || Page hero */
+
+
 .page-hero {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -545,26 +593,52 @@ section h2 {
     text-align: left;
 
 
+}
+
+
+
+
+
+.heading {
+    text-align: center;
+    grid-area: 3 / 1 / 6 / 7;
+    position: relative;
+    left: 0;
+    padding: 3rem;
+   
+    background: rgba(255, 255, 255, 0.321);
+
+    border-radius: 0 1rem 1rem 0;
+}
+
+@supports (backdrop-filter: blur(3px)) {
+    .heading {
+        background: rgba(194, 194, 194, 0.042);
+       backdrop-filter: blur(3px);
+
+   } 
+
+
+/*header background*/
+
+header.home {
     background: url(/KBT/media/pictures/woman.png) center no-repeat;
     background-size: cover;
     background-attachment: fixed; 
 }
 
 
-.heading {
-    grid-area: 2 / 1 / 6 / 6;
-    position: relative;
-    left: 0;
-    padding: 3rem;
-    box-shadow: inset 36.3333px -36.3333px 36.3333px rgba(165, 165, 165, 0.056), inset -36.3333px 36.3333px 36.3333px rgba(255, 255, 255, 0.056);
-    
-
-    border-radius: 0 1rem 1rem 0;
+header.about {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.774), rgba(255, 255, 255, 0.445)), url(/KBT/media/pictures/heat_meter.jpg) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
 }
 
-
-
-
+header.contact {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.774), rgba(255, 255, 255, 0.445)), url(/KBT/media/pictures/contact.png) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}
 
 
 
@@ -622,28 +696,15 @@ h3 .card {
 /* || about section */
 
 
-.container {
-    padding: 3rem;
-}
 
-
-
-.text-wrapper {
-    width: 75vw;
-    background: white;
-    padding: 2rem 4rem;
-
-}
-
-
-.container-img {
-    height: 25vh;
-    width: 75vw;
-    padding: 5rem;
-}
 
 .container-img-about {
     background: url(/KBT/media/pictures/meter-solutions.png) center no-repeat;
+    background-size: cover;
+}
+
+.bg-about {
+    background: url(/KBT/media/pictures/10.png) center no-repeat;
     background-size: cover;
 }
 
@@ -655,14 +716,14 @@ h3 .card {
     background-size: cover;
 }
 
-.item-list li {
+.list li {
     padding: 1rem;
     list-style-type: none;
     position: relative;
     text-align: left;
 }
 
-.item-list li::before {
+.list li::before {
     content: "\2022";
     display: inline-block;
     font-weight: bold;
@@ -670,6 +731,13 @@ h3 .card {
     margin-left: -2rem;
     color: var(--CTAred);
 
+}
+
+/* || Contact */
+
+.container-img-contact {
+    background: url(/KBT/media/pictures/kontakt.jpg) center no-repeat;
+    background-size: cover;
 }
 
 
@@ -681,6 +749,8 @@ footer {
     height: 100%;
 
     position: relative;
+
+    clear: both;
 }
 
 footer a {
@@ -739,7 +809,7 @@ footer .circle:hover {
     }
     
     .heading {
-        grid-area: 3 / 1 / 5 / 4;
+        grid-area: 3 / 1 / 5 / 5;
 
 }
 
@@ -816,6 +886,12 @@ footer .circle:hover {
         font-size: 70%;
     }
 
+    
+    .heading {
+        grid-area: 3 / 1 / 5 / 4;
+
+}
+
     .card-btn {
         
         background: linear-gradient(to right bottom, #fff 49%, #fff 40%, var(--darkBlue) 50%, var(--darkBlue) 50%);
@@ -824,23 +900,11 @@ footer .circle:hover {
     }
     
     .card:hover .card-btn {
-        background: linear-gradient(to right bottom, #fff 35%, var(--lightBlue) 49%, var(--darkBlue) 50%, var(--darkBlue) 50%);
+        background: linear-gradient(to right bottom, #fff 47%, var(--lightBlue) 40%, var(--darkBlue) 50%, var(--darkBlue) 50%);
         opacity: 1;
     }
 
     
-    .card-btn {
-        
-        background: linear-gradient(to right bottom, #fff 49%, #fff 40%, var(--darkBlue) 50%, var(--darkBlue) 50%);
-        opacity: 0;
-        transition: all 1s ease;
-    }
-    
-    .card:hover .card-btn {
-        background: linear-gradient(to right bottom, #fff 35%, var(--lightBlue) 49%, var(--darkBlue) 50%, var(--darkBlue) 50%);
-        opacity: 1;
-    }
-
     
 .container {
     text-align: center;
@@ -893,4 +957,4 @@ footer .circle:hover {
 }
 
 };
- }
+ }}

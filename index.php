@@ -11,27 +11,15 @@
       
 
         <!-- Page-hero section -->
-        <header class="page-hero .grid-container ">
-            
-                <div class="heading">
-                    <h1 class="uppercase">Chytré vodoměry a měřiče</h1>
-                        <div class="subheading" role="doc-subtitle">Mějte svou spotřebu pod kontrolou</div>
-                        <a href="#" class="no-underline btn btn-style btn-primary flex" role="button">Zjistěte více</a>
-                </div>
-
-                <div class="divider-bottom-light">
-                    
-                </div>
-                <div class="divider-bottom-dark">
-                    
-                </div>
-                    
-        </header>
-
+            <?php
+            $background = "home";
+            $heading = "Chytré vodoměry a měřiče";
+            $subheading = "Mějte svou spotřebu pod kontrolou";
+            include "partials/header.php"; ?>
         <main>
         
             <!-- Services section -->
-            <section class="flex col-container  ">
+            <section class="flex col-container center ">
 
                     <h2>Naše řešení pro vaše měření</h2>
 
@@ -41,7 +29,7 @@
             
                             <div class="circle flex center">
                                 <div class="icon">
-                                    <svg width="40" height="50" viewBox="0 0 77 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="40" height="50" viewBox="0 0 77 97" fill="none">
                                         <path d="M49.9115 72.6719C46.599 61.9844 40.0625 49.6458 39.6771 48.9271C39.4479 48.4896 38.9896 48.2135 38.4948 48.2135C38 48.2135 37.5469 48.4896 37.3177 48.9271C36.9323 49.6458 30.3958 61.9844 27.0833 72.6667C12.651 67.8021 2.68229 53.9844 2.68229 38.6094C2.68229 18.8021 18.75 2.6875 38.4948 2.6875C58.2448 2.6875 74.3125 18.8021 74.3125 38.6094C74.3125 53.9844 64.3438 67.8021 49.9115 72.6719ZM49.0729 83.5677C49.0677 83.6146 49.0625 83.6615 49.0625 83.7135C49.0625 89.5573 44.3229 94.3073 38.4948 94.3073C32.6719 94.3073 27.9323 89.5573 27.9323 83.7135C27.9323 83.6615 27.9271 83.6146 27.9219 83.5677C27.1146 75.9635 35.3594 58.724 38.4948 52.4948C41.6354 58.724 49.8802 75.9635 49.0729 83.5677ZM38.4948 0C17.2708 0 0 17.3229 0 38.6094C0 47.1146 2.70312 55.1771 7.81771 61.9323C12.5 68.1198 19.0365 72.8125 26.3438 75.2552C25.4844 78.5052 25.0208 81.4844 25.25 83.7812C25.2865 91.0729 31.2135 97 38.4948 97C45.776 97 51.7031 91.0729 51.7448 83.7812C51.9688 81.4844 51.5104 78.5052 50.651 75.2552C57.9583 72.8125 64.4948 68.1198 69.1771 61.9323C74.2865 55.1771 76.9896 47.1146 76.9896 38.6094C76.9896 17.3229 59.724 0 38.4948 0Z" fill="#224694"/>
                                         <path d="M59.4063 23.6198C58.6772 22.5937 57.8647 21.6302 56.9897 20.7187L59.4428 17.5989L56.3334 20.0625C55.4272 19.1875 54.4636 18.3698 53.4428 17.6354L55.9376 13.2969C58.9688 15.4114 61.6303 18.0781 63.7345 21.1146L59.4063 23.6198ZM69.0834 36.1146H64.0886C63.8178 33.2708 63.0834 30.5312 61.9011 27.9375L66.2293 25.4323C67.8282 28.8021 68.7865 32.3854 69.0834 36.1146ZM49.1355 15.1354C46.5522 13.9479 43.8178 13.2135 40.9845 12.9427V7.93228C44.7032 8.22916 48.2761 9.18749 51.6355 10.7969L49.1355 15.1354ZM36.0105 12.9427C33.172 13.2135 30.4428 13.9479 27.8542 15.1354L25.3595 10.7969C28.7188 9.18749 32.2917 8.22916 36.0105 7.93228V12.9427ZM17.5834 23.6198L13.2605 21.1146C15.3647 18.0781 18.0261 15.4114 21.0522 13.2969L23.5522 17.6354C21.2605 19.2864 19.2292 21.3229 17.5834 23.6198ZM12.9063 36.1146H7.90633C8.2032 32.3854 9.16154 28.8021 10.7657 25.4323L15.0886 27.9375C13.9063 30.5312 13.1772 33.2708 12.9063 36.1146ZM56.2032 10.2552C55.8959 10.0573 55.5209 9.99999 55.1667 10.0885C55.0522 10.1146 54.9428 10.1614 54.8438 10.2187C54.8386 10.0989 54.823 9.97916 54.7917 9.86457C54.6928 9.51561 54.4532 9.21874 54.1355 9.04686C49.6459 6.65103 44.7865 5.34374 39.6928 5.16145C39.3282 5.15103 38.974 5.28645 38.7136 5.54166C38.6303 5.61978 38.5574 5.71874 38.4949 5.8177C38.4376 5.71874 38.3647 5.61978 38.2761 5.54166C38.0157 5.28645 37.6667 5.15103 37.3022 5.16145C32.2084 5.34374 27.349 6.65103 22.8595 9.04686C22.5365 9.21874 22.3022 9.51561 22.2032 9.86457C22.1667 9.97916 22.1511 10.0989 22.1511 10.2187C22.0522 10.1614 21.9428 10.1146 21.823 10.0885C21.4688 9.99999 21.099 10.0573 20.7865 10.2552C16.547 12.9271 12.8907 16.5937 10.224 20.8489C10.0313 21.1562 9.96883 21.5312 10.0574 21.8906C10.0886 22.0052 10.1303 22.1146 10.1876 22.2135C10.073 22.2187 9.9532 22.2344 9.83862 22.2656C9.48966 22.3646 9.19279 22.6042 9.02612 22.9271C6.63549 27.4271 5.3282 32.3021 5.15112 37.4114C5.13549 37.776 5.27091 38.1302 5.52612 38.3906C5.77612 38.6562 6.12508 38.8021 6.48966 38.8021H14.1511C14.8647 38.8021 15.4584 38.2396 15.4897 37.5208C15.6459 34.1771 16.5001 30.9792 18.0313 28.0208C18.2449 27.6042 18.224 27.1302 18.0105 26.75C18.448 26.7448 18.8699 26.526 19.1199 26.1354C20.8959 23.3646 23.297 20.9583 26.0574 19.1771C26.448 18.9219 26.6667 18.5 26.672 18.0625C26.8699 18.1771 27.0938 18.2344 27.323 18.2344C27.5313 18.2344 27.7397 18.1875 27.9376 18.0833C30.8907 16.5469 34.0782 15.6927 37.4115 15.5364C37.8751 15.5104 38.2709 15.2552 38.4949 14.8802C38.7188 15.2552 39.1199 15.5104 39.5834 15.5364C42.9167 15.6927 46.1042 16.5469 49.0574 18.0833C49.2553 18.1875 49.4636 18.2344 49.672 18.2344C49.9011 18.2344 50.1251 18.1771 50.323 18.0625C50.3282 18.5 50.547 18.9219 50.9376 19.1719C52.099 19.9271 53.198 20.7917 54.2136 21.7448L36.6563 35.6562C36.4376 35.7969 36.2292 35.9531 36.0417 36.1458C34.6824 37.5052 34.6824 39.7135 36.0417 41.0729C37.3959 42.4375 39.599 42.4375 40.9532 41.0729C41.1459 40.8854 41.3022 40.6719 41.4428 40.4531L55.3126 22.8437C56.2605 23.8646 57.1251 24.9687 57.8751 26.1354C58.1251 26.526 58.547 26.7448 58.9792 26.75C58.7709 27.1302 58.7501 27.6042 58.9636 28.0208C60.4949 30.9792 61.349 34.1771 61.5053 37.5208C61.5365 38.2396 62.1251 38.8021 62.8438 38.8021H70.5053C70.8699 38.8021 71.2136 38.6562 71.4688 38.3906C71.7188 38.1302 71.8542 37.776 71.8438 37.4114C71.6615 32.3021 70.3595 27.4271 67.9688 22.9271C67.797 22.6042 67.5053 22.3646 67.1563 22.2656C67.0418 22.2344 66.922 22.2187 66.8074 22.2135C66.8595 22.1146 66.9063 22.0052 66.9324 21.8906C67.0209 21.5312 66.9636 21.1562 66.7709 20.8489C64.1043 16.5937 60.448 12.9271 56.2032 10.2552Z" fill="#224694"/>
                                         <path d="M35.901 89.9427C35.6666 89.7188 35.4218 89.5208 35.2135 89.2865C34.3385 88.3958 33.7395 87.3438 33.2655 86.1979C32.8072 85.0365 32.4999 83.7708 32.2551 82.4479C32.0051 81.1146 31.8333 79.7396 31.6041 78.2656C31.2135 78.9115 30.9635 79.6146 30.7603 80.3333C30.5676 81.0521 30.4478 81.7917 30.3957 82.5417C30.302 84.0365 30.4791 85.599 31.0624 87.0833C31.3541 87.8177 31.7603 88.5208 32.2603 89.1615C32.7603 89.7969 33.3801 90.349 34.0624 90.7604C34.3957 90.9844 34.7655 91.1406 35.1249 91.3021C35.4999 91.4271 35.8593 91.5625 36.2447 91.6198C36.9947 91.7865 37.7603 91.7813 38.4947 91.6719C37.8541 91.2708 37.2343 90.9479 36.6926 90.5417C36.4062 90.3646 36.1614 90.1354 35.901 89.9427Z" fill="#224694"/>
@@ -132,20 +120,19 @@
                 <div class="bg-no-skew flex center col-container">
             
                     <h2 class="white-text ">Kdo jsme? </h2>
-                    <div class="container row-container flex center">
-                        
-                        <div class="container-img container-img-about"></div>
-                        <div class="text-wrapper flex center col-container ">
-                            <h3>KBT Třebíč, tradice a inovace v jednom </h3>
-                            <p>Ratione eveniet voluptatem vel laborum suscipit qui eos, temporibus numquam repellendus rem non eligendi reprehenderit blanditiis harum.</p>
-            
-                            <a href="html/about.html" class="no-underline btn btn-style btn-secondary flex">
-                                Více
-                            </a>
-                        </div>
-            
-                    </div>
+
+                    <?php 
+                    $headline = "KBT Třebíč, tradice a inovace v jednom";
+                    $image = "container-img-about";
+                    $paragraph = "<p>Jsme společnost s dlouholetou tradicí, založená v roce 1993. Specializujeme se na instalaci a výměnu moderních vodoměrů, průtokoměrů a měřičů tepla. 
+                    <br>Máme rozsáhlé zkušenosti a odbornost v této oblasti a můžeme poskytovat vysokou kvalitu služeb našim zákazníkům v Třebíči i okolí. 
+                    <br>Naším cílem je poskytovat spolehlivé, profesionální a cenově dostupné služby našim zákazníkům.</p>";
+                    $path = "pages/about.php";
+                    $buttontext = "Více";
+                    include "partials/articleshort.php";
+                    ?>
                 </div>
+
             </section>
             <div class="left-bottom-divider ">
             </div>
@@ -155,19 +142,19 @@
                 <h2>Plaťte jen to, co využijete</h2>
                 <div class="container row-container flex center">
                         
-                    <div class="container-img container-img-reason"></div>
-                    <div class="text-wrapper flex center col-container bg-white">
-                        <h3>Na přesném měření záleží</h3>
-                        <ul class="item-list">
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </li>
-                            <li>Dolor impedit ut, eius dicta architecto repellat quas.</li>
-                            <li> Eum sed, laudantium minima ea optio dolorem.</li>
-                        </ul>
-        
-                        <a href="/" class="no-underline btn btn-style btn-secondary flex">
-                            Kontaktujte nás
-                        </a>
-                    </div>
+                <?php 
+                    $headline = "Na přesném měření záleží";
+                    $image = "container-img-reason";
+                    $paragraph = "<ul class=\"list\">
+                                    <li>Vodoměry a teploměry pomáhají přesně měřit a sledovat spotřebu, což může vést ke snížení nákladů. </li>
+                                    <li> Měřením spotřeby vody a tepla lze zjistit neefektivní oblasti a provést změny k omezení plýtvání a zvýšení efektivity.</li>
+                                    <li> Přesný, měřením mohou být problémy s dodávkou vody a tepla zjištěny a řešeny rychleji, což má za následek menší ztrátu a lepší údržbu systému.</li>
+                                </ul>";
+                    $path = "pages/contact.php";
+                    $buttontext = "Kontaktujte nás";
+                    include "partials/articleshort.php";
+                    ?>
+                   
         
                 </div>
                
