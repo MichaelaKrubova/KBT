@@ -27,6 +27,7 @@ html {
     font-size: 62.5%;  /*10px*/
     
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -247,6 +248,26 @@ p, a, li {
 }
 
 
+.align-left {
+    transform: translateX(-110%);
+}
+
+.align-right {
+    transform: translateX(110%);
+}
+
+.slide-in {
+    opacity: 0;
+}
+
+.active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 2s ease-in-out;
+}
+
+
+
 .divider-bottom-light {
     grid-area: 6 / 3 / 7 / 7;
     width: 75vw;
@@ -284,13 +305,13 @@ p, a, li {
 
 
 .scrollDown {
-    margin-top: 0;
-    transition: margin-top .8s ease;
-    cursor: pointer;
+    position: relative;
+    top: 0;
+    transition: top .8s ease;
 }
 
-.scrollDown:hover {
-    margin-top: .8rem;
+.heading:hover .scrollDown {
+    top: 1rem;
 }
 
 
@@ -542,7 +563,7 @@ p, a, li {
 }
 
 .footer-menu li a:hover {
-    font-style: italic;
+    color: #00D4FA;
 }
 
 /* || Sections */
@@ -554,7 +575,6 @@ section {
 
     position: relative;
     padding: 3rem;
-    overflow: auto;
 
     
 }
@@ -567,10 +587,6 @@ article {
     padding: 5rem;
     overflow: auto;
     
-}
-
-article a {
-    color: black;
 }
 
 
@@ -740,6 +756,16 @@ h3 .card {
     background-size: cover;
 }
 
+.contact-link {
+    color: black;
+    transition: all .7s  ease;
+}
+
+.contact-link:hover {
+    color: var(--blue);
+    font-size: 1.5rem;
+}
+
 
 /* || Footer */
 
@@ -771,6 +797,7 @@ footer .circle {
     background: white;
     border: 5px solid var(--lightBlue);
     box-shadow: 0 0 0 2px rgba(0, 212, 250, 0.3);
+    transition: all .6s ease;
 }
 
 footer .circle:hover {

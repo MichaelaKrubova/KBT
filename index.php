@@ -12,6 +12,7 @@
 
         <!-- Page-hero section -->
             <?php
+            $anchor = "home";
             $background = "home";
             $heading = "Chytré vodoměry a měřiče";
             $subheading = "Mějte svou spotřebu pod kontrolou";
@@ -19,7 +20,7 @@
         <main>
         
             <!-- Services section -->
-            <section class="flex col-container center ">
+            <section class="flex col-container center " id="home">
 
                     <h2>Naše řešení pro vaše měření</h2>
 
@@ -146,9 +147,9 @@
                     $headline = "Na přesném měření záleží";
                     $image = "container-img-reason";
                     $paragraph = "<ul class=\"list\">
-                                    <li>Vodoměry a teploměry pomáhají přesně měřit a sledovat spotřebu, což může vést ke snížení nákladů. </li>
-                                    <li> Měřením spotřeby vody a tepla lze zjistit neefektivní oblasti a provést změny k omezení plýtvání a zvýšení efektivity.</li>
-                                    <li> Přesný, měřením mohou být problémy s dodávkou vody a tepla zjištěny a řešeny rychleji, což má za následek menší ztrátu a lepší údržbu systému.</li>
+                                    <li><strong>Efektivita:</strong> S vodoměry a teploměry můžete sledovat spotřebu vody a tepla, což vám umožní optimalizovat jejich využití a ušetřit peníze.</li>
+                                    <li><strong>Přesnost:</strong> Tyto měřiče poskytují přesné a spolehlivé údaje o spotřebě vody a tepla, což vám pomůže při účtování a řízení nákladů.</li>
+                                    <li><strong>Správa a údržba:</strong> Použitím vodoměrů a teploměrů mohou být problémy s dodávkou vody a tepla identifikovány a řešeny rychleji, což má za následek menší ztrátu a lepší údržbu systému.</li>
                                 </ul>";
                     $path = "pages/contact.php";
                     $buttontext = "Kontaktujte nás";

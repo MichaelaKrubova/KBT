@@ -38,3 +38,44 @@ document.addEventListener("click", (e) => {
 })
 
 
+//slide in of boxes
+
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+const sliderBoxes = document.querySelectorAll(".slide-in");
+
+const checkSlide = () => {
+    sliderBoxes.forEach(box => {
+        const boxFromTop = box.getBoundingClientRect().top; //the distance of the box from the top
+        const windowHeight = window.innerHeight; //height of the viewport
+        const boxVisible = 100; //the point at which will be the box visible
+        console.log(windowHeight);
+        console.log(boxFromTop);
+
+        if(boxFromTop < (windowHeight - boxVisible)) {
+            box.classList.add("active");
+        } else {
+            box.classList.remove("active");
+        }
+
+        
+        
+
+    })
+}
+
+window.addEventListener('scroll', debounce(checkSlide));
+

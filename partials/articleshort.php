@@ -1,9 +1,9 @@
 <div class="container row-container flex center">
                         
-    <div class="container-img <?php echo $image; ?>">
+    <div class="container-img align-right slide-in <?php echo $image; ?>">
         
     </div>
-    <article class="text-wrapper flex center col-container ">
+    <article class="text-wrapper flex center col-container align-left slide-in">
         <h3><?php echo $headline; ?></h3>
         <?php echo $paragraph; ?>
 

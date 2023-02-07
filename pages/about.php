@@ -14,13 +14,14 @@
 
     <!-- page-hero -->
         <?php
+        $anchor = "about";
         $background = "about";
         $heading = "KBT Třebíč";
         $subheading = "Kdo jsme?";
         include "../partials/header.php"; 
 
         ?>
-        <section class="flex center bg-about">
+        <section class="flex center bg-about" id="about">
         <?php
                     $headline = "KBT Třebíč, tradice a inovace v jednom";
                     $image = "container-img-about";
