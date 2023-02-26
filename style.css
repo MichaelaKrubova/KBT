@@ -28,6 +28,7 @@ html {
     
     box-sizing: border-box;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -61,6 +62,7 @@ h2 {
 h3 {
     font-size: 2rem;
     margin: 1rem 0;
+    text-align: center;
 }
 
 p, a, li {
@@ -149,7 +151,7 @@ p, a, li {
 }
 
 .bg-gradient {
-    background: linear-gradient(181.04deg, #224694 -39.03%, rgba(0, 212, 250, 1) 142.12%);
+    background: linear-gradient(181.04deg, #4C68A8 -39.03%, #3BD9F6 142.12%);
 }
 
 
@@ -165,6 +167,7 @@ p, a, li {
     
     width: fit-content;
     height: fit-content;
+    text-align: center;
     
 }
 
@@ -235,7 +238,7 @@ p, a, li {
 
 .long-text-wrapper {
     width: 75vw;
-    background: white;
+    background: rgba(255, 255, 255, 0.94);
     padding: 2rem 4rem;
 
 }
@@ -249,11 +252,11 @@ p, a, li {
 
 
 .align-left {
-    transform: translateX(-110%);
+    transform: translateX(-90%);
 }
 
 .align-right {
-    transform: translateX(110%);
+    transform: translateX(90%);
 }
 
 .slide-in {
@@ -263,9 +266,31 @@ p, a, li {
 .active {
     opacity: 1;
     transform: translateX(0%);
-    transition: all 2s ease-in-out;
+    transition: all 1.5s ease-in;
 }
 
+
+
+.svg-container {
+    width: 6rem;
+    height: 4.5rem;
+    overflow: auto;
+}
+
+
+.logo-link {
+    padding-top: .5rem;
+    z-index: 200;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    padding: .2rem 0;
+}
 
 
 .divider-bottom-light {
@@ -319,36 +344,21 @@ p, a, li {
 
 
 .topbar {
-    padding: 1rem 5rem;
+    padding: 0 2rem;
     position: fixed;
     height: max-content;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.85);
     z-index: 9999;
     
 }
-/* 
-.topbar.scrolled {
-    background: linear-gradient(180deg, #224694 1.65%, #00D4FA 124.21%);
-    max-width: calc(100vw - 1.5rem);
-}
-
-.topbar.scrolled a {
-    color: white;
-} */
 
 
 #toggleBtn { 
     color: #002256;
     
 }
-/* 
-.topbar.scrolled #toggleBtn { 
-    color: white;
-    
-} */
 
 @supports (backdrop-filter: blur(3px)) {
      .topbar {
@@ -620,9 +630,9 @@ article {
     grid-area: 3 / 1 / 6 / 7;
     position: relative;
     left: 0;
-    padding: 3rem;
+    padding: 2rem;
    
-    background: rgba(255, 255, 255, 0.321);
+    background: rgba(255, 255, 255, 0.2);
 
     border-radius: 0 1rem 1rem 0;
 }
@@ -638,20 +648,20 @@ article {
 /*header background*/
 
 header.home {
-    background: url(/KBT/media/pictures/woman.png) center no-repeat;
+    background: url(/media/pictures/woman.png) center no-repeat;
     background-size: cover;
     background-attachment: fixed; 
 }
 
 
 header.about {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.774), rgba(255, 255, 255, 0.445)), url(/KBT/media/pictures/heat_meter.jpg) center no-repeat;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.774), rgba(255, 255, 255, 0.445)), url(/media/pictures/heat_meter.jpg) center no-repeat;
     background-size: cover;
     background-attachment: fixed; 
 }
 
 header.contact {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.774), rgba(255, 255, 255, 0.445)), url(/KBT/media/pictures/contact.png) center no-repeat;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.774), rgba(255, 255, 255, 0.445)), url(/media/pictures/contact.png) center no-repeat;
     background-size: cover;
     background-attachment: fixed; 
 }
@@ -715,19 +725,19 @@ h3 .card {
 
 
 .container-img-about {
-    background: url(/KBT/media/pictures/meter-solutions.png) center no-repeat;
+    background: url(/media/pictures/meter-solutions.png) center no-repeat;
     background-size: cover;
 }
 
 .bg-about {
-    background: url(/KBT/media/pictures/10.png) center no-repeat;
+    background: url(/media/pictures/heat_meter.jpg) center no-repeat;
     background-size: cover;
 }
 
 /* || reasons section */
 
 .container-img-reason {
-    background: url(/KBT/media/pictures/meraky.png) no-repeat;
+    background: url(/media/pictures/meraky.png) no-repeat;
     background-position: 25%;
     background-size: cover;
 }
@@ -752,12 +762,12 @@ h3 .card {
 /* || Contact */
 
 .container-img-contact {
-    background: url(/KBT/media/pictures/kontakt.jpg) center no-repeat;
+    background: url(/media/pictures/kontakt.jpg) center no-repeat;
     background-size: cover;
 }
 
 .contact-link {
-    color: black;
+    color: var(--darkBlue);
     transition: all .7s  ease;
 }
 
@@ -781,6 +791,7 @@ footer {
 
 footer a {
     color: white;
+    margin: 1rem 1rem;
 }
 
 .footer-content {
@@ -837,10 +848,15 @@ footer .circle:hover {
     
     .heading {
         grid-area: 3 / 1 / 5 / 5;
-
+        background: transparent;
+        backdrop-filter: none;
 }
 
 /* TopNav */
+
+    .topbar {
+        background: transparent;
+    }
 
     .mobile-nav-toggle {
         display: none;
@@ -848,14 +864,16 @@ footer .circle:hover {
 
     .nav-menu {
         position: fixed;
-        padding: 0;
+        padding: 0 2rem;
         transform: translateX(0%);
         flex-direction: row;
         justify-content: flex-end;
+        z-index: 100;
 
         inset: 0;
         height: fit-content;
-        background: transparent;
+        
+        background: rgba(255, 255, 255, 0.85);
         
         backdrop-filter: none;
 
