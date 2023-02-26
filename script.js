@@ -61,10 +61,8 @@ const checkSlide = () => {
     sliderBoxes.forEach(box => {
         const boxFromTop = box.getBoundingClientRect().top; //the distance of the box from the top
         const windowHeight = window.innerHeight; //height of the viewport
-        const boxVisible = 100; //the point at which will be the box visible
-        console.log(windowHeight);
-        console.log(boxFromTop);
-
+        const boxVisible = box.offsetHeight/3; //the point at which will be the box visible
+        console.log(boxVisible);
         if(boxFromTop < (windowHeight - boxVisible)) {
             box.classList.add("active");
         } else {

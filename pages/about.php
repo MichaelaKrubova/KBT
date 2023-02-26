@@ -21,7 +21,7 @@
         include "../partials/header.php"; 
 
         ?>
-        <section class="flex center bg-about" id="about">
+        <section class="flex center " id="about">
         <?php
                     $headline = "KBT Třebíč, tradice a inovace v jednom";
                     $image = "container-img-about";
@@ -36,7 +36,7 @@
                     $path = "pages/contact.php";
                     $buttontext = "Kontaktujte nás";
                     
-                    include "../partials/articleLong.php";
+                    include "../partials/articleshort.php";
 
                     ?>
            

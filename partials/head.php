@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=Work+Sans&display=swap" rel="stylesheet"> 
     
     <!-- icons -->
+    <link rel="icon" href="<?php echo $ROOT; ?>media/favicon.svg"/>
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
     <script src="https://kit.fontawesome.com/9c6b3cf538.js" crossorigin="anonymous"></script>
 

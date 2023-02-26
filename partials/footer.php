@@ -1,10 +1,10 @@
 <footer class="bg-gradient ">
             <div class="footer-menu">
                 <ul class="flex row-container footer-menu-items">
-                    <li role="none"><a href="/" class="no-underline" role="položka menu">Vodoměry</a></li>
-                    <li role="none"><a href="#" class="no-underline" role="položka menu">Průtokoměry</a></li>
-                    <li role="none"><a href="#" class="no-underline" role="položka menu">IRTN</a></li>
-                    <li role="none"><a href="#" class="no-underline" role="položka menu">Ostatní</a></li>
+                    <li role="none"><a href="<?php echo $ROOT; ?>pages/vodomery.php" class="no-underline" role="položka menu">Vodoměry</a></li>
+                    <li role="none"><a href="<?php echo $ROOT; ?>pages/prutokomery.php" class="no-underline" role="položka menu">Průtokoměry</a></li>
+                    <li role="none"><a href="<?php echo $ROOT; ?>pages/irtn.php" class="no-underline" role="položka menu">IRTN</a></li>
+                    <li role="none"><a href="<?php echo $ROOT; ?>pages/ostatni.php" class="no-underline" role="položka menu">Ostatní</a></li>
                 </ul>
             </div>
             <div class="footer-content flex row-container">

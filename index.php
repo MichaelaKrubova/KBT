@@ -26,7 +26,7 @@
 
                 <div class="row-container flex center">
                     <div class="card">
-                        <a href="/" class="card-link flex col-container center no-underline">
+                        <a href="pages/vodomery.php" class="card-link flex col-container center no-underline">
             
                             <div class="circle flex center">
                                 <div class="icon">
@@ -45,7 +45,7 @@
                         </a>
                     </div>
                     <div class="card flex">
-                        <a href="/" class="card-link flex col-container center no-underline">
+                        <a href="pages/prutokomery.php" class="card-link flex col-container center no-underline">
             
                             <div class="circle flex center">
                                 <div class="icon">
@@ -64,7 +64,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="/" class="card-link flex col-container center no-underline">
+                        <a href="pages/irtn.php" class="card-link flex col-container center no-underline">
             
                             <div class="circle flex center">
                                 <div class="icon">
@@ -90,7 +90,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="/" class="card-link flex col-container center no-underline">
+                        <a href="pages/ostatni.php" class="card-link flex col-container center no-underline">
             
                             <div class="circle flex center">
                                 <div class="icon">
