@@ -40,4 +40,4 @@ The website has the following features:
 
 To view the website, simply click on the following link: https://www.kbttrebic.cz/
 
-Alternatively, you can clone the repository to your local machine and open the index.html file in your browser.
+Alternatively, you can clone the repository to your local machine and open the index.php file in your browser.
